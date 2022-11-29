@@ -1,0 +1,86 @@
+
+@font-face {
+  font-family: BadBoys;
+  src: url(fonts/New_Gothic_Style.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper .static-txt {
+  font-size: 60px;
+  margin-top: 4px;
+}
+
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  line-height: 90px;
+  height: 80px;
+  overflow: hidden;
+}
+
+
+.dynamic-txts li {
+  list-style: none;
+  position: relative;
+  font-size: 60px;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite;
+  letter-spacing: 2px;
+}
+
+@keyframes slide {
+  100% {
+    top: -270px;
+  }
+}
+
+.dynamic-txts li::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-left: 2px solid white;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100%)
+  }
+  100% {
+    left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+.read-the-docs {
+  color: #888;
+}
+
+
